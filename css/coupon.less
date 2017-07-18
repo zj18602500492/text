@@ -1,0 +1,152 @@
+
+@baseColor:#ff841d;
+*{
+  padding: 0;
+  margin: 0;
+
+
+}
+body{
+  font-family: "微软雅黑",sans-serif;
+  font-size: 13px;
+}
+html,body{
+  min-width:320px;
+}
+a,
+a:hover{
+  text-decoration: none;
+}
+ul , li{
+  list-style: none;
+}
+input{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+/*清楚浮动*/
+.clearfix::before,
+.clearfix::after{
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+
+
+/*页面主体开始*/
+.max_header{
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+
+  .left_jian{
+
+    position: absolute;
+    width:20px;
+    height: 20px;
+    left:10px;
+    top:15px;
+    border-left:3px solid #fff;
+    border-top:3px solid #fff;
+    transform: rotate(-45deg);
+  }
+  h1{
+    margin:0;
+
+    font-size:20px;
+    font-weight:bold;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+  }
+  .fright {
+    img{
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      right:10px;
+      bottom:10px;
+    }
+  }
+}
+
+
+
+.main_sma{
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.pro_pic {
+  width: 32%;
+  height: 32%;
+  border: 1px solid #eeeeee;
+  float: left;
+  margin-right:5px;
+  margin-bottom:5px;
+  text-align: center;
+
+
+
+
+
+
+  .pro_dic{
+
+    margin-top:10px;;
+    img{
+
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+
+
+
+
+
+/*底部css样式*/
+.ma_xx{
+
+  height: 38px;
+  line-height: 38px;
+  background-color: #efefef;
+  margin-top:10px;
+  margin-bottom:30px;
+  padding-left:10px;
+}
+
+.foot_n{
+
+  margin:10px 0px;
+  overflow: hidden;
+  border-top:1px solid #c4c4c4;
+
+  a{
+    display: block;
+    float: left;
+    box-sizing:border-box;
+    font-size:14px;
+    height: 34px;
+    line-height: 34px;
+    border-right:1px solid #c4c4c4;
+    border-bottom:1px solid #c4c4c4 ;
+    text-align:center;
+    width:30%;
+  }
+}
+.foote_bot {
+  height: 60px;
+
+  text-align: center;
+  p {
+
+  }
+}

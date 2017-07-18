@@ -1,0 +1,143 @@
+html,
+body,
+ul,
+li,
+img,
+a,
+p,
+div,
+form,
+input {
+  padding: 0;
+  margin: 0;
+  color: #666;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: "微软雅黑", sans-serif;
+  font-size: 13px;
+}
+html,
+body {
+  min-width: 320px;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+/*清楚浮动*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+.man_header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+.header .fleft img {
+  max-height: 25px;
+  float: left;
+  margin: 10px;
+}
+.header .fright img {
+  max-height: 34px;
+  float: right;
+  margin: 10px;
+}
+.search {
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px;
+  position: relative;
+}
+.search .sea_in .inp {
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  height: 30px;
+  width: 90%;
+  border-radius: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  float: left;
+}
+.search .sea_in .btn {
+  outline: none;
+  width: 63px;
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #ff841d;
+  font-size: 16px;
+  color: #FFFFFF;
+  position: absolute;
+}
+.nav_nan {
+  width: 100%;
+  height: 40px;
+  background-color: #f1f1f1;
+  line-height: 40px;
+  padding-left: 10px;
+}
+.nan .ajax_info {
+  border-bottom: 1px solid #ddd;
+}
+.nan .ajax_info .pic_left {
+  float: left;
+}
+.nan .ajax_info .pic_left img {
+  padding-left: 10px;
+  height: 90px;
+  display: block;
+}
+.nan .ajax_info .txt_right {
+  float: left;
+  margin-left: 10px;
+  padding-top: 5px;
+}
+.nan .ajax_info .txt_right .p_two {
+  margin-top: 10px;
+  color: red;
+}
+.nan .ajax_info .bot_om {
+  margin-top: 10px;
+}
+.foot_n {
+  margin: 10px 0px;
+  overflow: hidden;
+  border-top: 1px solid #c4c4c4;
+}
+.foot_n a {
+  display: block;
+  float: left;
+  box-sizing: border-box;
+  font-size: 14px;
+  height: 34px;
+  line-height: 34px;
+  border-right: 1px solid #c4c4c4;
+  border-bottom: 1px solid #c4c4c4 ;
+  text-align: center;
+  width: 30%;
+}
+.foote_bot {
+  height: 60px;
+  text-align: center;
+}

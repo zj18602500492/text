@@ -1,0 +1,249 @@
+/*公共样式*/
+
+@baseColor:#ff841d;
+/*1.样式重置*/
+html,body,ul,li,img,a,p,div,form,input{
+  padding: 0;
+  margin: 0;
+  color: #666;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+body{
+  font-family: "微软雅黑",sans-serif;
+  font-size: 13px;
+}
+html,body{
+  min-width:320px;
+}
+a,
+a:hover{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+}
+input{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+/*2.添加新的样式*/
+
+.clearfix::before,
+.clearfix::after{
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+
+
+//公共样式
+.man_header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+
+.header .fleft img {
+
+  max-height: 25px;
+  float: left;
+  margin: 10px;
+}
+
+.header .fright img {
+
+  max-height: 34px;
+  float: right;
+  margin: 10px;
+}
+
+.search {
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px;
+  position: relative;
+}
+
+.search .sea_in .inp {
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  height: 30px;
+  width: 90%;
+  border-radius: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  float: left;
+}
+
+.search .sea_in .btn {
+  outline: none;
+  width: 63px;
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #ff841d;
+  font-size: 16px;
+  color: #FFFFFF;
+
+  position: absolute;
+}
+
+
+//页面主体样式
+#menu {
+  .menu_row {
+    text-align: center;
+    .pic {
+      height: 50px;
+      margin-top: 20px;
+      > img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+
+
+
+
+#recommen {
+  position: relative;
+  .big_box{
+
+    .ajax_info{
+      position: relative;
+      height: 110px;
+      border-bottom: 1px solid #ddd;
+      .pic_left{
+        position: absolute;
+        left: 0;
+        top: 10px;
+        img{
+          height: 90px;
+          display: block;
+        }
+      }
+      .txt_right{
+        padding:10px 5px;
+        margin-left:100px;
+        p{
+          margin-bottom:40px;
+          span{
+            color: @baseColor;
+          }
+        }
+        .f_left{
+          float: left;
+        }
+        .f_right{
+          float: right;
+        }
+      }
+    }
+  }
+}
+
+#recommen .easy {
+  position: relative;
+  margin-top: 20px;
+  height: 35px;
+  background-color: #ff9000;
+  border-bottom: solid 1px #ffc881;
+
+
+
+
+
+  /*小圆圈制作*/
+  .dis{
+    position: absolute;
+    right:10px;
+    top:8px;
+
+    width: 20px;
+    height: 20px;
+    border:1px solid #fff;
+    border-radius: 50%;
+  }
+  .dis .dics{
+
+    width: 6px;
+    height:6px;
+    border-right:1px solid #fff;
+    border-top:1px solid #fff;
+    margin:5px 5px;
+    transform: rotate(45deg);
+  }
+}
+
+/*小圆圈制作结束*/
+#recommen .easy p {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 35px;
+  padding-left: 10px;
+  color: #fff;
+}
+
+.more_bar{
+  margin:10px;
+  border-radius:10px;
+}
+.more_bar a{
+  text-align: center;
+  display: block;
+  height: 30px;
+  line-height:30px;
+  background-color: #F4F4F4;
+  font-size:13px;
+}
+.red_nav {
+  height: 35px;
+  background-color: @baseColor;
+  p{
+    line-height: 35px;
+    padding-left:10px;
+    font-size:18px;
+    font-weight:900;
+    color: #fff;
+  }
+}
+
+
+/*底部css样式*/
+.foot_n{
+  margin:10px 0px;
+  overflow: hidden;
+  border-top:1px solid #c4c4c4;
+
+  a{
+    display: block;
+    float: left;
+    box-sizing:border-box;
+    font-size:14px;
+    height: 34px;
+    line-height: 34px;
+    border-right:1px solid #c4c4c4;
+    border-bottom:1px solid #c4c4c4 ;
+    text-align:center;
+    width:30%;
+  }
+}
+.foote_bot{
+   height: 60px;
+
+   text-align: center;
+   p{
+
+   }
+ }

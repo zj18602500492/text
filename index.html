@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/index.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部-->
+<header class="man_header">
+    <div class="header">
+        <div class="fleft">
+            <a href="javascript:;" title="慢慢买比价网--手机版">
+                <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="fright">
+            <a href="javascript:;" title>
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+<!--搜索-->
+<section class="search">
+    <div class="sea_in">
+        <input type="search" placeholder="请输入您想比价的商品" class="inp">
+        <input type="button" value="搜索" class="btn">
+    </div>
+
+</section>
+<!--菜单-->
+<!--栅格系统-->
+<section id="menu">
+    <div class="container">
+        <div class="row">
+
+        </div>
+
+        </div>
+
+</section>
+<!--商品推荐-->
+<section id="recommen">
+    <div class="easy">
+      <a href="moneyctrl.html">    <!-- 跳转至省钱控页面-->
+            <p>超值折扣推荐</p>
+            <div class="dis">
+                <div class="dics">
+
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <ul class="big_box">
+        <!--ajax 动态添加内容-->
+
+
+    </ul>
+</section>
+<!--底部-->
+<section id="footer">
+   <div class="more_bar">
+     <a href="moneyctrl.html">更多优惠信息>></a>
+   </div>
+    <div class="red_nav">
+        <a href="javascript:;">
+            <p>品牌排行</p>
+        </a>
+        <div class="ima_rig">
+
+        </div>
+    </div>
+    <div class="foot_n">
+        <a href="jaavascript:;">登录</a>
+        <a href="jaavascript:;">注册</a>
+        <a href="javascript:scroll(0,0)" style="width:40%;">返回顶部</a>
+    </div>
+    <div class="foote_bot">
+        <p>
+            <a href="javacript:;" style="color:red">手机app下载</a>
+            <a href="javascript:;">慢慢买手机吧版</a>
+            <span>--掌上比价平台</span>
+        </p>
+        <p>m.manmanmai.com</p>
+    </div>
+</section>
+
+
+<!--js文件 注意引入的依赖关系-->
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/index.js"></script>
+
+<script type="text/html" id="template">
+    {{each result as value}}
+    <div class="col-xs-3 menu_row">
+        <a href="{{value.titlehref}}">
+            <div class="pic">{{#value.img}}</div>
+            <div class="name">{{value.name}}</div>
+        </a>
+    </div>
+    {{/each}}
+</script>
+<!--第二个模板-->
+<script type="html/text" id="bottom_on">
+{{each result as value}}
+<li class="clearfix ajax_info">
+    <a href="javascript:;">
+        <div class="pic_left">{{#value.productImgSm}}</div>
+        <div class="txt_right">
+            <p>{{value.productName}} <span>{{value.productPinkage}}</span></p>
+            <span class="f_left">{{value.productFrom+'|'+value.productTime}}</span>
+            <span class="f_right"><i class="glyphicon glyphicon-comment"></i> {{value.productComCount}}</span>
+        </div>
+    </a>
+</li>
+{{/each}}
+</script>
+
+</body>
+</html>

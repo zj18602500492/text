@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet/less" href="css/brandritle.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部-->
+<header class="man_header">
+    <div class="header">
+        <div class="fleft">
+            <a href="javascript:;" title="慢慢买比价网--手机版">
+                <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="fright">
+            <a href="javascript:;" title>
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+<!--搜索-->
+<section class="search">
+    <div class="sea_in">
+        <input type="search" placeholder="请输入您想比价的商品" class="inp">
+        <input type="button" value="搜索" class="btn">
+    </div>
+
+</section>
+
+  <!--动态加载-->
+
+<section id="menu">
+    <div class="hotBrand">热门品牌排行</div>
+    <ul class="menu_ul">
+        <li>
+            <div class="menu_cls clearfix"><span>大家电</span><i></i></div>
+        </li>
+    </ul>
+
+</section>
+
+
+        <!--底部-->
+        <section id="footer">
+
+            <div class="foot_n">
+                <a href="jaavascript:;">登录</a>
+                <a href="jaavascript:;">注册</a>
+                <a href="javascript:scroll(0,0)" style="width:40%;">返回顶部</a>
+            </div>
+            <div class="foote_bot">
+                <p>
+                    <a href="javacript:;" style="color:red">手机app下载</a>
+                    <a href="javascript:;">慢慢买手机吧版</a>
+                    <span>--掌上比价平台</span>
+                </p>
+                <p>m.manmanmai.com</p>
+            </div>
+        </section>
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/template.js"></script>
+<script src="./js/brandritle.js"></script>
+
+<!--模板引擎-->
+<script type="html/text" id="getbrandtitle">
+     {{each result as value}}
+   <li>
+      <a href="brand.html?brandtitleid={{value.brandTitleId}}&brandtitle={{value.brandTitle}}" class="menu_cls"><span>{{value.brandTitle}}</span><i></i></a>
+   </li>
+{{/each}}
+</script>
+</body>
+</html>

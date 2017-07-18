@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/couponproduct.less">
+    <link rel="stylesheet/less" href="css/swiper.min.css">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<header class="max_header">
+    <a href="index.html">
+        <div class="left_jian">
+
+        </div>
+    </a>
+    <h1>优惠券</h1>
+
+    <div class="fright">
+        <a href="javascript:;" title>
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+
+
+<div class="men_box">
+     <!--页面主体-->
+</div>
+
+
+<!--底部-->
+<section id="footer">
+
+    <div class="foot_n">
+        <a href="jaavascript:;">登录</a>
+        <a href="jaavascript:;">注册</a>
+        <a href="javascript:scroll(0,0)" style="width:40%;">返回顶部</a>
+    </div>
+    <div class="foote_bot">
+        <p>
+            <a href="javacript:;" style="color:red">手机app下载</a>
+            <a href="javascript:;">慢慢买手机吧版</a>
+            <span>--掌上比价平台</span>
+        </p>
+        <p>m.manmanmai.com</p>
+    </div>
+</section>
+
+
+<!--遮罩-->
+<div class="modal">
+    <div class="dialog">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--轮播图-->
+
+
+<script src="lib/swiper.min.js"></script>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+
+<script src="js/couponproduct.js"></script>
+<!--模板引擎-->
+<script type="html/text" id="getcouponproduct">
+{{each result as value}}
+  <li class="clearfix ajax_info">
+    <a href="javascript:;">
+        <div class="pic_left">{{#value.couponProductImg}}</div>
+        <div class="txt_right">
+            <p>{{value.couponProductName}}</p>
+             <p class="f_left">{{value.couponProductPrice}}</p>
+            <span class="f_right" style="color:red;" >{{value.couponProductTime}}</span>
+        </div>
+    </a>
+</li>
+
+{{/each}}
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/moneyproduct.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<header class="max_header">
+    <a href="index.html">
+        <div class="left_jian">
+
+        </div>
+    </a>
+    <h1>国内折扣</h1>
+
+    <div class="fright">
+        <a href="javascript:;" title>
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+
+
+<!--动态加载-->
+
+<section id="recommen">
+
+</section>
+<!--商品评论-->
+<section id="comContent">
+
+</section>
+
+<!--选择页面-->
+<section id="pro_select">
+    <div class="select_page">
+        <p>已经是最后一页！</p>
+    </div>
+</section>
+<!--菜单-->
+<section id="menu">
+    <div class="menu_a">
+        <a href="index.html">首页</a> ><a href="./moneyctrl.html">省钱控</a> >
+
+    </div>
+</section>
+
+
+
+<!--底部-->
+<section id="footer">
+
+    <div class="foot_n">
+        <a href="jaavascript:;">登录</a>
+        <a href="jaavascript:;">注册</a>
+        <a href="javascript:scroll(0,0)" style="width:40%;">返回顶部</a>
+    </div>
+    <div class="foote_bot">
+        <p>
+            <a href="javacript:;" style="color:red">手机app下载</a>
+            <a href="javascript:;">慢慢买手机吧版</a>
+            <span>--掌上比价平台</span>
+        </p>
+        <p>m.manmanmai.com</p>
+    </div>
+</section>
+
+
+
+
+<!--js文件 注意引入的依赖关系-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/template.js"></script>
+<script src="./js/moneyproduct.js"></script>
+<!--模板引擎-->
+<script type="html/text" id="getmoneyctrlproduct">
+
+   <div class="recommen_top">
+    <p>{{result[0].productName}}</p>
+    <p>{{result[0].productPinkage}}</p>
+    <p><span>{{result[0].productFrom}}</span> <span>{{result[0].productTime}}</span> <span>{{result[0].productTips}}</span> <span>{{result[0].productComCount}}</span></p>
+</div>
+<div class="recommen_middle">
+    <div class="recommen_smImg">
+        {{#result[0].productImgSm}}
+    </div>
+    <div class="recommen_con">
+
+        <p>{{#result[0].productImgLg}}</p>
+        <p>{{#result[0].productImg2}}</p>
+        <p>{{#result[0].productImg3}}</p>
+    </div>
+</div>
+<div class="recommen_bottom">
+    <a href="javascript:;">前往购买</a>
+</div>
+
+</script>
+</body>
+</html>

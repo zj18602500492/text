@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/baicaijia.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<header class="max_header">
+    <a href="index.html">
+        <div class="left_jian">
+
+        </div>
+    </a>
+    <h1>白菜价-淘宝内部优惠券</h1>
+
+    <div class="fright">
+        <a href="javascript:;" title>
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+
+<!--滑动导航栏-->
+<div id="topNav">
+    <ul class="navBar clearfix">
+        <li><a href="javascript:;"></a></li>
+    </ul>
+</div>
+
+<div class="log_ig">
+    <img src="images/quan_banner_wap.png" alt="" style="width: 100%;">
+</div>
+
+
+<!--页面主体-->
+<div class="main_box">
+    <!--动态加载-->
+</div>
+
+
+<!--底部-->
+<section id="footer">
+
+    <div class="foot_n">
+        <a href="jaavascript:;">登录</a>
+        <a href="jaavascript:;">注册</a>
+        <a href="javascript:scroll(0,0)" style="width:40%;">返回顶部</a>
+    </div>
+    <div class="foote_bot">
+        <p>
+            <a href="javacript:;" style="color:red">手机app下载</a>
+            <a href="javascript:;">慢慢买手机吧版</a>
+            <span>--掌上比价平台</span>
+        </p>
+        <p>m.manmanmai.com</p>
+    </div>
+</section>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="js/baicaijia.js"></script>
+<script src="lib/template.js"></script>
+<!--模板引擎-->
+<script type="html/text" id="getbaicaijiatitle">
+{{each result as value}}
+  <li><a href="javascript:;" style="color:black;">{{value.title}}</a></li>
+{{/each}}
+
+</script>
+<!--页面主体模板-->
+<script type="html/text" id="getbaicaijiaproduct">
+
+{{each result as value}}
+<div class="baicai_jia clearfix">
+<a href="javascript:;" class="product_list">
+    <div class="product_pic">
+       {{#value.productImg}}
+    </div>
+    <div class="product_txt">
+        <p>{{#value.productName}}</p>
+        <p>{{#value.productPrice}}</p>
+        <p>{{#value.productCouponRemain}}</p>
+       <div class="foo_ter"> <span>{{#value.productCoupon}}</span>
+             <span>{{#value.productHref}}</span>
+       </div>
+    </div>
+</a>
+</div>
+{{/each}}
+</script>
+</html>

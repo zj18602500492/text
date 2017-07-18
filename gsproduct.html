@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="./css/gsproduct.less">
+    <script type="text/javascript" src="./lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+
+<body>
+<!--头部-->
+ <header class="max_header">
+    <a href="index.html">
+        <div class="left_jian">
+
+        </div>
+    </a>
+    <h1>凑单品</h1>
+
+    <div class="fright">
+        <a href="javascript:;" title>
+            <img src="images/header_app.png" alt="">
+        </a>
+    </div>
+</header>
+
+<!--nav 部分-->
+<section id="nav">
+    <ul class="nav_bar">
+        <li class="dropdown f_left">
+
+            <button id="dLabel" data-toggle="dropdown"> </button>
+            <ul class="dropdown-menu shop" aria-labelledby="dLabel"> </ul>
+        </li>
+        <li class="dropdown f_left">
+            <button id="dLabe2" data-toggle="dropdown"> </button>
+            <ul class="dropdown-menu shoparea" aria-labelledby="dLabe2"> </ul>
+        </li>
+        <li class="dropdown f_left">
+            <button id="dLabe3" data-toggle="dropdown">全部价格</button>
+            <ul class="dropdown-menu" aria-labelledby="dLabe3">
+                <li>全部价格 <i class="glyphicon glyphicon-ok"></i></li>
+                <li>1 - 10元 <i class="glyphicon glyphicon-ok"></i></li>
+                <li>10 - 20元 <i class="glyphicon glyphicon-ok"></i></li>
+                <li>20 - 30元 <i class="glyphicon glyphicon-ok"></i></li>
+                <li>30 - 40元 <i class="glyphicon glyphicon-ok"></i></li>
+            </ul>
+        </li>
+    </ul>
+
+</section>
+
+<!--search 关联-->
+<section id="searchbox" class="display">
+    <img src="./images/jingzhe.gif" alt="">
+</section>
+
+<!--商品推荐-->
+<section id="recommen" class="clearfix">
+
+</section>
+
+<!--菜单-->
+<section id="menu">
+    <div class="menu_a">
+        <a href="index.html">首页</a> ><a href="./gsproduct.html">凑单拼</a>
+    </div>
+</section>
+
+<!--底部-->
+<section id="footer">
+    <div class="foot_top">
+        <a href="javascript:;">登录</a>
+        <a href="javascript:;">注册</a>
+        <a href="javascript:scroll(0,0)" style="width: 40%; border: 0;">
+            <!--<img src="./images/top%2001.jpg" alt="">-->
+            返回顶部
+        </a>
+    </div>
+    <div class="foot_bottom">
+        <p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a> -- 掌上比价平台</p>
+        <p>m.manmanbuy.com</p>
+    </div>
+    <div class="app_down">
+        <img src="./images/fixed_man.png" alt="">
+    </div>
+</section>
+
+
+</body>
+<!--js文件 注意引入的依赖关系-->
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/template.js"></script>
+<script src="./js/gsproduct.js"></script>
+<!--nav 栏 模板-->
+<script type="html/text" id="getgsshop">
+{{each result as value}}
+ <li>{{value.shopName}}<i class="glyphicon glyphicon-ok"></i></li>
+{{/each}}
+</script>
+<script type="html/text" id="getgsshoparea">
+{{each result as value}}
+ <li>{{value.areaName}}<i class="glyphicon glyphicon-ok"></i></li>
+{{/each}}
+</script>
+
+<!--recommen 栏 模板-->
+<script type="html/text" id="getgsproduct">
+{{each result as value}}
+ <a href="javascript:;" class="f_left product_list">
+    <li>
+        <div class="product_pic">
+            <img src="{{value.productImg}}" alt="">
+            <p>{{value.productName}}</p>
+        </div>
+        <div class="product_piece">
+            <p>{{value.productPrice}}</p>
+        </div>
+    </li>
+</a>
+{{/each}}
+</script>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet/less" href="css/brand.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+
+    <title>慢慢买</title>
+</head>
+<body>
+<!--头部-->
+<header class="man_header">
+    <div class="header">
+        <div class="fleft">
+            <a href="javascript:;" title="慢慢买比价网--手机版">
+                <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="fright">
+            <a href="javascript:;" title>
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+<!--搜索-->
+<section class="search">
+    <div class="sea_in">
+        <input type="search" placeholder="请输入您想比价的商品" class="inp">
+        <input type="button" value="搜索" class="btn">
+    </div>
+
+</section>
+
+
+
+
+
+<!--导航栏-->
+<section id="nav">
+    <div class="nav_a">
+        <a href="index.html">首页</a> ><a href="./brandTitle.html">品牌大全</a> >
+    </div>
+</section>
+
+<!--菜单-->
+<section id="menu">
+    <div class="hotBrand"><span></span>哪个牌子好</div>
+    <ul class="menu_ul">
+        //动态生成li标签
+    </ul>
+
+    <div class="hotBrand"><span></span>产品销量排行</div>
+    <ul class="menu_pro">
+        //动态生成li标签
+    </ul>
+
+    <div class="hotBrand"><span></span>最有用的用户评论</div>
+    <div class="menv_comPic">
+        <div class="pic_left"> //js动态加载评论图片 </div>
+        <div class="txt_right"> //js动态加载评论标题</div>
+    </div>
+    <div class="menu_com">
+        //使用模板 动态加载评论文字内容
+    </div>
+</section>
+
+
+
+    <!--动态加载-->
+
+
+<!--底部-->
+<section id="footer">
+
+    <div class="foot_n">
+        <a href="jaavascript:;">登录</a>
+        <a href="jaavascript:;">注册</a>
+        <a href="javascript:scroll(0,0)" style="width:40%;">返回顶部</a>
+    </div>
+    <div class="foote_bot">
+        <p>
+            <a href="javacript:;" style="color:red">手机app下载</a>
+            <a href="javascript:;">慢慢买手机吧版</a>
+            <span>--掌上比价平台</span>
+        </p>
+        <p>m.manmanmai.com</p>
+    </div>
+</section>
+
+
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/template.js"></script>
+<script src="./js/brand.js"></script>
+<script type="html/text" id="getbrand">
+{{each result as value}}
+   <li>
+      <a href="productlist.html?id={{value.categoryId}}&category={{value.brandName}}" class="menu_cls"><b>2</b><span>{{value.brandName}}<br /><span id="smfz">{{value.brandInfo}}</span><i></i></a>
+   </li>
+{{/each}}
+
+</script>
+<script type="html/text" id="getbrandproductlist">
+{{each result as value}}
+<li class="clearfix">
+    <a href="javascript:;">
+        <div class="pic_left f_left">{{#value.productImg}}</div>
+        <div class="txt_right f_left">
+            <p>{{value.productName}}</p>
+            <p class="clearfix">
+                <span class="f_left">{{value.productPrice}}</span>
+                <span class="f_right">★ ★ ★ ★ ★</span>
+            </p>
+            <p> <span>{{value.productQuote}}</span> <span>{{value.productCom}}</span></p>
+        </div>
+    </a>
+</li>
+{{/each}}
+
+</script>
+<script type="html/text" id="getproductcom">
+{{each result as value}}
+<li class="clearfix">
+    <p style="padding:5px 0"><span>{{value.comName}}</span> <span style="color:orange">★ ★ ★ ★ ★</span> <span>{{value.comTime}}</span></p>
+    <p style="padding:5px 0">{{value.comContent}}</p>
+</li>
+{{/each}}
+
+</script>
+
+
+</body>
+</html>

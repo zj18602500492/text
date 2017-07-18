@@ -1,0 +1,172 @@
+
+*{
+  padding: 0;
+  margin: 0;
+
+
+}
+body{
+  font-family: "微软雅黑",sans-serif;
+  font-size: 13px;
+}
+html,body{
+  min-width:320px;
+}
+a,
+a:hover{
+  text-decoration: none;
+}
+ul , li{
+  list-style: none;
+}
+input{
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+/*清楚浮动*/
+.clearfix::before,
+.clearfix::after{
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+
+
+/*页面主体开始*/
+.max_header{
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+
+  .left_jian{
+
+    position: absolute;
+    width:20px;
+    height: 20px;
+    left:10px;
+    top:15px;
+    border-left:3px solid #fff;
+    border-top:3px solid #fff;
+    transform: rotate(-45deg);
+  }
+  h1{
+    margin:0;
+
+    font-size:20px;
+    font-weight:bold;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+  }
+  .fright {
+    img{
+      width: 34px;
+      height: 34px;
+      position: absolute;
+      right:10px;
+      bottom:10px;
+    }
+  }
+}
+/*头部结束*/
+
+
+/*主体部分css样式*/
+
+
+ .ajax_fo{
+   padding:10px 0 0 10px;
+   float: left;
+   width:50%;
+   height: 256px;
+
+   border-right:1px solid #ddd;
+   border-bottom: 1px solid #ddd;
+   .pic_top{
+     text-align: center;
+     img{
+       width: 140px;
+       height: 140px;
+     }
+
+   }
+   a{
+     .pic_bottom{
+       height: 100px;
+       p{
+         color: #000;
+         font-size:30px;
+       }
+     }
+   }
+ }
+#pppp{
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+#mony_xia{
+  height: 50px;
+  text-align: center;
+  .f_t{
+    color: red;
+  }
+}
+/*底部css样式*/
+
+.foot_n{
+
+  margin:10px 0px;
+  overflow: hidden;
+  border-top:1px solid #c4c4c4;
+
+  a{
+    display: block;
+    float: left;
+    box-sizing:border-box;
+    font-size:14px;
+    height: 34px;
+    line-height: 34px;
+    border-right:1px solid #c4c4c4;
+    border-bottom:1px solid #c4c4c4 ;
+    text-align:center;
+    width:30%;
+  }
+}
+.foote_bot {
+  height: 60px;
+
+  text-align: center;
+  p {
+
+  }
+}
+/*遮罩css样式*/
+
+.modal{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  left:0;
+  top: 0;
+  display: none;
+  .dialog{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+    text-align: center;
+    padding:10px 0;
+    img{
+      max-width:150px;
+    }
+  }
+}

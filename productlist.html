@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--引入第三方框架UI-->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet/less" href="css/productlist.less">
+    <script type="text/javascript" src="lib/less/less.js"></script>
+    <title>慢慢买</title>
+</head>
+<body>
+<body style="overflow: scroll">
+<header class="man_header">
+    <div class="header">
+        <div class="fleft">
+            <a href="index.html" title="慢慢买比价网--手机版">
+                <img src="images/header_logo.png" alt="慢慢买比价网--手机版">
+            </a>
+        </div>
+        <div class="fright">
+            <a href="javascript:;" title>
+                <img src="images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+</header>
+<!--搜索-->
+<section class="search">
+    <div class="sea_in">
+        <input type="search" placeholder="请输入您想比价的商品" class="inp">
+        <input type="button" value="搜索" class="btn">
+    </div>
+</section>
+ <nav>
+     <div class="nav_nan">
+         <a href="index.html">
+             <span>首页></span>
+         </a>
+         <a href="category.html">
+             <span>全部分类></span>
+         </a>
+         <a href="javascript:;">
+             <span>电视</span>
+         </a>
+
+     </div>
+ </nav>
+
+
+<div class="nan">
+
+</div>
+
+
+
+
+<div id="pro_select">
+    <div class="select_page">
+        <table>
+            <tbody>
+            <tr>
+                <td><a href="javascript:;" id="prev_page">上一页</a></td>
+                <td><select id="page_code">
+
+                </select></td>
+                <td><a href="javascript:;" id="next_page">下一页</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--<div class="pro_bottom">-->
+        <!--<p>更多推荐链接：</p>-->
+        <!--<p><a href="javascript:;"></a></p>-->
+        <!--<p><a href="javascript:;"></a></p>-->
+    <!--</div>-->
+</div>
+
+<!--底部块-->
+<footer>
+    <div class="foot_n">
+        <a href="jaavascript:;">登录</a>
+        <a href="jaavascript:;">注册</a>
+        <a href="javascript:scroll(0,0)" style="width:40%;">返回顶部</a>
+    </div>
+    <div class="foote_bot">
+        <p>
+            <a href="javacript:;" style="color:red">手机app下载</a>
+            <a href="javascript:;">慢慢买手机吧版</a>
+            <span>--掌上比价平台</span>
+        </p>
+        <p>m.manmanmai.com</p>
+    </div>
+</footer>
+
+
+
+
+
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/productlist.js"></script>
+<!--<script src="js/rem.js"></script>-->
+
+<!--模板引擎-->
+<script type="html/text" id="getproductlist">
+{{each result as value}}
+<li class="clearfix ajax_info">
+    <a href="bijia.html?productid={{value.productId}}&brandName={{value.brandName}}">
+        <div class="pic_left">{{#value.productImg}}</div>
+        <div class="txt_right">
+            <p class="p_one">{{value.productName}}</p>
+            <p  class="p_two">{{value.productPrice}}</p>
+             <div class="bot_om"><span class="f_left">{{value.productQuote}}</span>
+             <span class="f_right">{{value.productCom}}</span>
+             </div>
+
+        </div>
+    </a>
+</li>
+{{/each}}
+</script>
+
+</body>
+</html>

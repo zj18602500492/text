@@ -1,0 +1,93 @@
+/*公共样式*/
+/*1.样式重置*/
+html,
+body,
+ul,
+li,
+img,
+a,
+p,
+div,
+form,
+input {
+  padding: 0;
+  margin: 0;
+  color: #666;
+  box-sizing: border-box;
+  /*去除移动端特有的点击高亮效果*/
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  font-family: "微软雅黑", sans-serif;
+  font-size: 13px;
+}
+html,
+body {
+  min-width: 320px;
+}
+a,
+a:hover {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+/*2.添加新的样式*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0px;
+  clear: both;
+  visibility: hidden;
+}
+.man_header {
+  height: 50px;
+  background-color: #ff841d;
+  border-bottom: 1px solid #e6e6e6;
+  overflow: hidden;
+}
+.header .fleft img {
+  max-height: 25px;
+  float: left;
+  margin: 10px;
+}
+.header .fright img {
+  max-height: 34px;
+  float: right;
+  margin: 10px;
+}
+.search {
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px;
+  position: relative;
+}
+.search .sea_in .inp {
+  border: none;
+  outline: none;
+  background: #f1f1f1;
+  height: 30px;
+  width: 90%;
+  border-radius: 15px;
+  padding-left: 15px;
+  font-size: 16px;
+  float: left;
+}
+.search .sea_in .btn {
+  outline: none;
+  width: 63px;
+  height: 30px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  background-color: #ff841d;
+  font-size: 16px;
+  color: #FFFFFF;
+  position: absolute;
+}
